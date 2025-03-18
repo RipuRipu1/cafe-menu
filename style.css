@@ -1,0 +1,124 @@
+/*
+If you want to center the #menu horizontally.
+ You can do this by setting its margin-left and margin-right properties to auto. 
+ Think of the margin as invisible space around an element. 
+ Using these two margin properties, center the #menu element 
+ within the body element.
+*/
+
+body {
+    background-image: url('https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg');
+    font-family: sans-serif;
+    padding: 20px;
+}
+
+hr{
+    height: 2px;
+    background-color: brown;
+    border-color: brown;
+}
+  
+h1, h2, p {
+    text-align: center;
+}
+
+h1{
+    font-size: 40px;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+h2{
+    font-size: 30px;
+}
+
+/* The image is not centered horizontally, img elements are "like" inline elements. */
+/* To fix this use the value block for the display property 
+and use the applicable margin-left and margin-right values to center it horizontally.*/
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -25px;
+}
+
+.established{
+    font-style: italic;
+}
+
+/*
+add a fallback value for the font-family by adding another font name separated by a comma. 
+Fallbacks are used in instances where the initial is not found/available.
+*/
+h1, h2{
+    font-family: Impact, serif;
+}
+
+/* On a very wide screen, the coffee and dessert appear far apart from their prices.
+Add a max-width property to prevent it from growing too wide.*/
+
+.menu {
+    width: 80%;
+    background-color: burlywood;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+}
+
+/* You can give your menu some space between the content and 
+the sides with various padding properties. */
+
+/* Using your new flavor class as a selector, set the text-align property's value to left.*/
+.flavor, .dessert{
+    text-align: left;
+    width: 75%;
+}
+
+/* Now align the text to the right for the elements with the price class.*/
+.price{
+    text-align: right;
+    width: 25%;
+}
+
+/* The p elements are nested in an article element with the class attribute of item. */
+/* add a display property with value inline-block so the p elements behave more like inline elements. */
+/* there is a fairly large gap between each line. */
+/* to fix this: set their top and bottom margin to be 5px.*/
+.item p {
+    display: inline-block;
+    
+    /* there is a fairly large gap between each line. */
+    /* to fix this: set their top and bottom margin to be 5px.*/
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+
+/* the price didn't stay over on the right. 
+This is because inline-block elements only take up the width of their content. 
+To spread them out, add a width property to the flavor 75% and price class 25%.*/
+
+.bottom-line{
+    margin-top: 25px;
+}
+
+footer{
+    font-size: 14px;
+}
+
+a{
+    color: black;
+}
+
+/* change properties of a link when the link has actually been visited by using a pseudo-selector */
+a:visited{
+    color: black;
+}
+
+a:hover{
+    color: brown;
+}
+
+a:active{
+    color: brown;
+}
